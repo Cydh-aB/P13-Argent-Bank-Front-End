@@ -1,27 +1,28 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+// import { PersistGate } from 'redux-persist/integration/react'
+// import { persistStore } from 'redux-persist'
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Pages/Home'
-import { store } from './Redux/store'
+import Error from './Pages/Error';
 import SignIn from './Pages/SignIn'
-import User from './Pages/User'
+import Profil from './Pages/Profil'
 
 function App() {
   return (
     <>
-      <Provider store={store}>
-        <BrowserRouter>
-          <Header />
+      <BrowserRouter>
+        <Header />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<SignIn />} />
-            <Route path='/profile' element={<User />} />
+            <Route path='/profile' element={<Profil />} />
+            <Route path='*' element={<Error />} />
           </Routes>
-          <Footer />
-        </BrowserRouter>
-      </Provider>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

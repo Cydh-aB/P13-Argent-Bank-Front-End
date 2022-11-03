@@ -15,6 +15,10 @@ padding: 1.5rem;
 box-sizing: border-box;
 text-align: left;
 margin-bottom: 2rem;
+
+@media (min-width: 720px) {
+    flex-direction: row;
+}
 `
 const StyleAmount = styled.p`
 margin: 0;
@@ -27,6 +31,7 @@ margin: 0;
 const StyleContainer = styled.div`
 width: 100%;
 flex:1;
+color: #2c3e50;
 `
 const StyleTitle = styled.h3`
 margin: 0;
@@ -46,6 +51,10 @@ border-color: #00bc77;
 background-color: #00bc77;
 color: #fff;
 `
+
+const StyleTransaction = styled.div`
+    flex: 0;
+`
 /****/
 
 function Account({title, amount, description}){
@@ -56,9 +65,9 @@ function Account({title, amount, description}){
                 <StyleAmount>{amount}</StyleAmount>
                 <StyleDescription>{description}</StyleDescription>
             </StyleContainer>
-            <div>
+            <StyleTransaction>
                 <StyleBtn>View Transactions</StyleBtn>
-            </div>
+            </StyleTransaction>
         </StyleAccount>
     )
 }

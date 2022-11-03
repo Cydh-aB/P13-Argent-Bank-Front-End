@@ -1,8 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import loginReducer from '../Feature/loginSlice'
+import isLogReducer from './Feature/isLog'
+import loginErrorReducer from './Feature/loginError'
+import profilDataReducer from './Feature/profilData'
 
-export const store = configureStore({
-    reducer:{
-        login: loginReducer,
+const store = configureStore({
+    reducer: {
+        isLog: isLogReducer,
+        loginError: loginErrorReducer,
+        profilData: profilDataReducer
     }
 })
+
+export default store
