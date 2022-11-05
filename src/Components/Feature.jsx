@@ -6,7 +6,7 @@ const StyleItem = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 33%;
+width: 28%;
 padding: 40px;
 
 img{

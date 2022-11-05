@@ -13,6 +13,8 @@ flex: 1;
 
 const StyleContainer = styled.div`
 display: flex;
+flex-wrap: wrap;
+justify-content: center;
 `
 
 export default function Index() {
